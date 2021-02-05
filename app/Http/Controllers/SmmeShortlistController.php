@@ -16,12 +16,7 @@ class SmmeShortlistController extends Controller
     {
         //
         $shortlists = SmmeShortlist::latest()->paginate(5);
-        return view('smmes.index', compact('shortlists'))->with('i', (request()->input('page', 1) - 1) * 5);
-
-        /**
-        * $shortlists = SmmeShortlist::index();
-        * return view('smmes.index', ["shortlists" => $shortlists]);
-        */
+        return view('Smmes.index', compact('shortlists'))->with('i', (request()->input('page', 1) - 1) * 5);
     }
 
     /**
