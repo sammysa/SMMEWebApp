@@ -1,4 +1,4 @@
-@extends('layouts.header')
+@extends('Layouts.Header')
 
 @section('content')
 <!-- Content Wrapper. Contains page content -->

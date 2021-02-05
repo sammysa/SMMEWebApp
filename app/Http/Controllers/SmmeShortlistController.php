@@ -27,7 +27,7 @@ class SmmeShortlistController extends Controller
     public function create()
     {
         //
-        return view('smmes.register');
+        return view('Smmes.Register');
     }
 
     /**
@@ -55,7 +55,7 @@ class SmmeShortlistController extends Controller
 
         SmmeShortlist::create($request->all());
 
-        return redirect()->route('smmes.index')->with('success', 'SMME Created Successfully.');
+        return redirect()->route('Smmes.Index')->with('success', 'SMME Created Successfully.');
     }
 
     /**
@@ -67,7 +67,7 @@ class SmmeShortlistController extends Controller
     public function show(SmmeShortlist $shortlist)
     {
         //
-        return view('smmes.show', compact('shortlist'));
+        return view('Smmes.Show', compact('shortlist'));
     }
 
     /**
@@ -79,7 +79,7 @@ class SmmeShortlistController extends Controller
     public function edit(SmmeShortlist $shortlist)
     {
         //
-        return view('smmes.edit', compact('shortlist'));
+        return view('Smmes.Edit', compact('shortlist'));
     }
 
     /**
@@ -98,7 +98,7 @@ class SmmeShortlistController extends Controller
 
         $shortlistCandidate->update($request->all());
 
-        return redirect()->route('smmes.index')->with('success', 'SMME Updated Successfully.');
+        return redirect()->route('Smmes.Index')->with('success', 'SMME Updated Successfully.');
     }
 
     /**
@@ -112,6 +112,6 @@ class SmmeShortlistController extends Controller
         //
         $shortlistCandidate->delete();
 
-        return redirect()->route('smmes.index')->with('success', 'SMME deleted successfully.');
+        return redirect()->route('Smmes.Index')->with('success', 'SMME deleted successfully.');
     }
 }
